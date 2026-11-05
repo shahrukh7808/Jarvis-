@@ -1,0 +1,10 @@
+{
+  "name": "JARVIS Urdu AI Assistant",
+  "short_name": "JARVIS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071522",
+  "theme_color": "#071522",
+  "description": "Urdu AI voice assistant",
+  "icons": []
+}
