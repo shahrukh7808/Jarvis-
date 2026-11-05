@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071522">
+  <meta name="description" content="Urdu AI voice assistant">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+  <title>JARVIS — اردو AI اسسٹنٹ</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand"><span class="brand-mark">J</span><div><h1>J.A.R.V.I.S</h1><p>ذہین ذاتی معاون</p></div></div>
+      <span class="online"><i></i> آن لائن</span>
+    </header>
+
+    <section class="hero">
+      <div class="reactor" id="reactor"><div class="ring ring-a"></div><div class="ring ring-b"></div><div class="reactor-core"><span>J</span></div></div>
+      <p class="eyebrow">PERSONAL AI ASSISTANT</p>
+      <h2 id="status">السلام علیکم!</h2>
+      <p class="sub" id="hint">میں جاروس ہوں، آپ کی کیا مدد کروں؟</p>
+    </section>
+
+    <section class="chat" id="chat" aria-live="polite">
+      <div class="bubble assistant">السلام علیکم! اپنا سوال لکھیں یا مائیکروفون دبا کر بات کریں۔</div>
+    </section>
+
+    <section class="composer">
+      <textarea id="message" rows="1" placeholder="یہاں اپنا پیغام لکھیں..." aria-label="پیغام"></textarea>
+      <button id="send" class="send" aria-label="بھیجیں">➤</button>
+    </section>
+    <div class="controls">
+      <button id="mic" class="mic"><span>🎙</span> بول کر پوچھیں</button>
+      <label class="toggle"><input id="voiceReply" type="checkbox" checked><span class="switch"></span> جواب آواز میں</label>
+    </div>
+    <p class="notice" id="notice">مائیکروفون کے لیے اجازت درکار ہو سکتی ہے۔</p>
+    <footer>JARVIS AI <span>•</span> آپ کی گفتگو اسی سیشن میں</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

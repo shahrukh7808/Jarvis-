@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+:root{color-scheme:dark;--cyan:#52e7f4;--muted:#91aebb;--panel:#0c2030}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 23%,#12364a 0,#081724 43%,#040b12 100%);color:#e9fbff;font-family:Inter,"Noto Nastaliq Urdu",sans-serif}
+.shell{width:min(100%,520px);min-height:100vh;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 18px calc(16px + env(safe-area-inset-bottom));display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;direction:ltr}
+.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:42px;height:42px;border:1px solid #46ddec;border-radius:13px;display:grid;place-items:center;color:var(--cyan);font-size:23px;box-shadow:0 0 18px #31d9eb38}
+.brand h1{font-size:17px;letter-spacing:4px;margin:0}.brand p{font-family:"Noto Nastaliq Urdu",serif;font-size:11px;color:var(--muted);margin:0;direction:rtl}
+.online{font-size:11px;color:#a8c7d1;display:flex;align-items:center;gap:7px}.online i{width:7px;height:7px;background:#56edb0;border-radius:50%;box-shadow:0 0 10px #56edb0}
+.hero{text-align:center;padding:24px 0 14px}
+.reactor{width:166px;height:166px;margin:0 auto 18px;position:relative;display:grid;place-items:center}
+.ring{position:absolute;inset:7px;border:1px solid #48d9ed88;border-radius:50%;box-shadow:0 0 25px #23d9ee24}
+.ring-a{border-left-color:transparent;animation:spin 8s linear infinite}.ring-b{inset:-5px;border-right-color:transparent;border-bottom-color:#4de6f566;animation:spin 12s linear infinite reverse}
+.reactor-core{width:91px;height:91px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 40% 35%,#d9ffff,#48dced 24%,#087c9b 62%,#062638);box-shadow:0 0 24px #39e4f3,0 0 60px #16a8c755,inset 0 0 18px white}
+.reactor-core span{font-size:35px;font-weight:700;color:#062333;text-shadow:0 1px 1px white}
+@keyframes spin{to{transform:rotate(360deg)}}
+.listening .reactor-core{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.1);box-shadow:0 0 45px #39e4f3}}
+.eyebrow{font-size:9px;letter-spacing:3px;color:#62d9e7;margin:0 0 7px;direction:ltr}
+.hero h2{font-family:"Noto Nastaliq Urdu",serif;font-size:22px;font-weight:600;margin:0}
+.sub{font-family:"Noto Nastaliq Urdu",serif;font-size:13px;color:var(--muted);margin:0}
+.chat{display:flex;flex-direction:column;gap:10px;flex:1;min-height:125px;max-height:34vh;overflow:auto;padding:12px 2px}
+.bubble{max-width:88%;padding:12px 14px;border-radius:15px;font-family:"Noto Nastaliq Urdu",serif;font-size:13px;line-height:2;white-space:pre-wrap;overflow-wrap:anywhere}
+.assistant{align-self:flex-start;background:#102b3c;border:1px solid #1b5062;border-top-right-radius:4px}
+.user{align-self:flex-end;background:#073d50;border:1px solid #14758a;border-top-left-radius:4px}
+.composer{display:flex;gap:9px;align-items:flex-end;background:#0b1c29;border:1px solid #245064;border-radius:17px;padding:8px}
+textarea{flex:1;resize:none;max-height:110px;border:0;outline:0;background:transparent;color:white;font-family:"Noto Nastaliq Urdu",serif;font-size:13px;line-height:1.9;padding:7px;direction:rtl}
+textarea::placeholder{color:#7995a2}
+button{cursor:pointer;font:inherit}
+.send{width:42px;height:42px;border:0;border-radius:13px;background:linear-gradient(135deg,#4de4ee,#0787a5);color:#03202c;font-size:22px}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 2px}
+.mic{border:1px solid #2d8798;border-radius:13px;background:#0c2a3a;color:#bdfaff;padding:11px 15px;font-family:"Noto Nastaliq Urdu",serif;font-size:12px}
+.mic span{margin-left:5px}
+.toggle{display:flex;align-items:center;gap:8px;color:#9db9c4;font-family:"Noto Nastaliq Urdu",serif;font-size:11px}
+.toggle input{display:none}.switch{width:34px;height:19px;border-radius:20px;background:#34505d;position:relative}.switch:after{content:"";position:absolute;width:13px;height:13px;top:3px;right:3px;background:#d7faff;border-radius:50%;transition:.2s}
+.toggle input:checked+.switch{background:#087e91}.toggle input:checked+.switch:after{transform:translateX(-15px)}
+.notice{text-align:center;color:#718d99;font-family:"Noto Nastaliq Urdu",serif;font-size:10px;margin:0 0 13px}
+footer{text-align:center;color:#526f7c;font-size:9px;letter-spacing:2px;direction:ltr;padding-top:10px}footer span{color:var(--cyan)}
+button:disabled{opacity:.5;cursor:wait}
+@media(min-width:600px){.shell{min-height:850px}.chat{max-height:310px}}
